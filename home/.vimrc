@@ -234,9 +234,26 @@ endif
 let g:ale_linters = {'ruby': ['standardrb']}
 let g:ale_fixers = {'ruby': ['standardrb']}
 
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ruby_indent_assignment_style = 'variable'
 let g:ruby_indent_hanging_elements = 0
+
+" disable diagnotic annotations in LSP, which is separate from ale
+" let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
+
+" function! AleOff()
+"     let g:ale_linters = {}
+"     let g:ale_fixers = {}
+" endfunction
+"
+" :command! -nargs=0 AleOff :call AleOff()
+"
+" function! AleOn()
+"     let g:ale_linters = {'ruby': ['standardrb']}
+"     let g:ale_fixers = {'ruby': ['standardrb']}
+" endfunction
+"
+" :command! -nargs=0 AleOn :call AleOn()
 
 " TODO: clean this up
 " let g:ale_scss_stylelint_executable = 'stylelint'
